@@ -34,7 +34,6 @@ public class AuthenticationController {
     @PostMapping("/authenticate")
     public ResponseEntity<String> authenticate(@RequestBody AuthenticationRequest authRequest) {
 
-        System.out.println(passwordEncoder.encode("password"));
         authManager.authenticate(
                 new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword())
         );
