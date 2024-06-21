@@ -31,10 +31,11 @@ public class UserDao {
     );
 
     public UserDetails findUserByEmail(String email){
-       return APPLICATION_USERS // implementation of UserDetailsService loadByUsername method
+        UserDetails userDetails = APPLICATION_USERS // implementation of UserDetailsService loadByUsername method
                 .stream()
-                .filter(userDetails -> userDetails.getUsername().equalsIgnoreCase(email))
+                .filter(userDetail -> userDetail.getUsername().equalsIgnoreCase(email))
                 .findFirst()
                 .orElseThrow(() -> new UsernameNotFoundException("User credentials are wrong !"));
+        return userDetails;
     }
 }
