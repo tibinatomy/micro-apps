@@ -16,11 +16,13 @@ public class GreetingsController {
 
     @GetMapping
     public ResponseEntity<String> sayHello(){
+
         return ResponseEntity.ok("Hello from the API");
     }
 
     @GetMapping("/say-good-bye")
     public ResponseEntity<String> sayGoodBye(){
+
         return ResponseEntity.ok("Good bye. See you later !");
     }
 }

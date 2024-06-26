@@ -21,9 +21,10 @@
         </dependencies>
     </dependencyManagement>
 
-<!--    <modules>-->
-<!--        <module>security-api</module>-->
-<!--        <module>data-api</module>-->
-<!--    </modules>-->
+    <modules>
+        <module>common-core</module>
+        <module>security-api</module>
+        <module>data-api</module>
+    </modules>
 
 </project>
